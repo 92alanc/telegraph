@@ -1,6 +1,6 @@
 #include "morse.h"
 
-#define BUZZER 2
+#define BUZZER 2                                 
 
 void filterInput(char);
 
@@ -14,7 +14,7 @@ void loop()
 {
   String input = Serial.readString();
   for (int i = 0; i < input.length(); i++)
-    filterInput(input[i]);
+      filterInput(input[i]);
 }
 
 void filterInput(char input)

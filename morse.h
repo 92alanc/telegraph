@@ -6,8 +6,8 @@
 
 #include <Arduino.h>
 
-#define DOT 100
-#define DASH 400
+#define DOT 60
+#define DASH 220
 
 // ##################################### //
 // ######## FUNCTION TEMPLATES ######### //
@@ -71,6 +71,7 @@ void dot(int buzzer)
   digitalWrite(buzzer, HIGH);
   delay(DOT);
   digitalWrite(buzzer, LOW);
+  delay(DOT);
 }
 
 void dash(int buzzer)
@@ -78,6 +79,7 @@ void dash(int buzzer)
   digitalWrite(buzzer, HIGH);
   delay(DASH);
   digitalWrite(buzzer, LOW);
+  delay(DOT);
 }
 
 // Letters
@@ -340,5 +342,5 @@ void nine(int buzzer)
 
 void space(int buzzer)
 {
-  delay(1000);
+  delay(500);
 }
