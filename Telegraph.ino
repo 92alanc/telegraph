@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "morse.h"
 
 #define BUZZER 2
