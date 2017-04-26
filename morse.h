@@ -6,8 +6,9 @@
 
 #include <Arduino.h>
 
-#define DOT 60
-#define DASH 220
+#define DOT 60 // Length of a dot in milliseconds
+#define DASH 300 // Length of a dash in milliseconds
+#define GAP 100 // Length of the gap between letters in milliseconds
 
 // ##################################### //
 // ######## FUNCTION TEMPLATES ######### //
@@ -71,7 +72,7 @@ void dot(int buzzer)
   digitalWrite(buzzer, HIGH);
   delay(DOT);
   digitalWrite(buzzer, LOW);
-  delay(DOT);
+  delay(GAP);
 }
 
 void dash(int buzzer)
@@ -79,7 +80,7 @@ void dash(int buzzer)
   digitalWrite(buzzer, HIGH);
   delay(DASH);
   digitalWrite(buzzer, LOW);
-  delay(DOT);
+  delay(GAP);
 }
 
 // Letters
